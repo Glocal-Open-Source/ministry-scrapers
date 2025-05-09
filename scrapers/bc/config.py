@@ -132,7 +132,7 @@ minister_urls = {
     ]
 }
 # maps crown corp contact info to minister in charge of ministry responsible
-crown_to_ministry = {
+crown_corp_urls = {
     "BC Assessment": "Finance",
     "BC Council for International Education": "Post-Secondary Education and Future Skills",
     "BC Family Maintenance Agency": "Attorney General",
@@ -164,7 +164,7 @@ crown_to_ministry = {
     "Transportation Investment Corporation": "Transportation and Transit",
 }
 
-crown_to_urls = {
+crown_corp_urls = {
     corp: minister_urls[ministry]
-    for corp, ministry in crown_to_ministry.items()
+    for corp, ministry in crown_corp_urls.items()
 }
