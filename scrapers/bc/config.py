@@ -22,7 +22,7 @@
 #  -----------------------
 #
 
-urls = {
+minister_urls = {
 
     "Ministry of Agriculture and Food": [
         "https://news.gov.bc.ca/ministries/agriculture-and-food/biography",
@@ -130,4 +130,41 @@ urls = {
     "Water, Land and Resource Stewardship": [
         "https://news.gov.bc.ca/ministries/water-land-and-resource-stewardship/biography",
     ]
+}
+# maps crown corp contact info to minister in charge of ministry responsible
+crown_to_ministry = {
+    "BC Assessment": "Finance",
+    "BC Council for International Education": "Post-Secondary Education and Future Skills",
+    "BC Family Maintenance Agency": "Attorney General",
+    "BC Financial Services Authority": "Finance",
+    "BC Games Society": "Tourism, Arts, Culture and Sport",
+    "BC Housing": "Housing and Municipal Affairs",
+    "BC Hydro and Power Authority": "Energy and Climate Solutions",
+    "BC Infrastructure Benefits": "Infrastructure",
+    "BC Energy Regulator": "Energy and Climate Solutions",
+    "BC Pavilion Corporation": "Tourism, Arts, Culture and Sport",
+    "BC Transit": "Transportation and Transit",
+    "British Columbia Lottery Corporation": "Finance",
+    "British Columbia Securities Commission": "Finance",
+    "Columbia Basin Trust": "Finance",
+    "Columbia Power Corporation": "Finance",
+    "Community Living BC": "Social Development and Poverty Reduction",
+    "Destination BC": "Tourism, Arts, Culture and Sport",
+    "First Peoples' Cultural Council": "Indigenous Relations and Reconciliation",
+    "Forest Enhancement Society of BC": "Forests",
+    "Forestry Innovation Investment": "Jobs, Economic Development and Innovation",
+    "InBC Investment Corp": "Jobs, Economic Development and Innovation",
+    "Infrastructure BC": "Infrastructure",
+    "Innovate BC": "Jobs, Economic Development and Innovation",
+    "Insurance Corporation of British Columbia": "Public Safety and Solicitor General",
+    "Knowledge Network": "Tourism, Arts, Culture and Sport",
+    "Legal Aid BC": "Attorney General",
+    "Royal BC Museum": "Tourism, Arts, Culture and Sport",
+    "SkilledTradesBC": "Post-Secondary Education and Future Skills",
+    "Transportation Investment Corporation": "Transportation and Transit",
+}
+
+crown_to_urls = {
+    corp: minister_urls[ministry]
+    for corp, ministry in crown_to_ministry.items()
 }
