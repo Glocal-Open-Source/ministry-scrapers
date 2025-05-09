@@ -22,6 +22,8 @@
 #  -----------------------
 #
 
+####################################################################################################################
+
 minister_urls = {
 
     "Ministry of Agriculture and Food": [
@@ -131,6 +133,9 @@ minister_urls = {
         "https://news.gov.bc.ca/ministries/water-land-and-resource-stewardship/biography",
     ]
 }
+
+####################################################################################################################
+
 # maps crown corp contact info to minister in charge of ministry responsible
 crown_corp_urls = {
     "BC Assessment": "Finance",
@@ -168,3 +173,9 @@ crown_corp_urls = {
     corp: minister_urls[ministry]
     for corp, ministry in crown_corp_urls.items()
 }
+
+####################################################################################################################
+
+# Tribunals, Advisories, and Authorities
+authorities_url = "https://www.bcpublicsectorboardapplications.gov.bc.ca/s/directoryofagencies"
+# -> contains list of all tribunals/boards, and suburls with members. requires a unique approach
