@@ -54,7 +54,7 @@ def get_minister_data(session, url):
     }
 
 
-def scrape_ministries(output_file='output.csv'):
+def scrape_ministries(output_file='data/ab/ministries.csv'):
     session = requests.Session()
     headers = [
         'type', 'about', 'priorities', 'website',
@@ -69,7 +69,3 @@ def scrape_ministries(output_file='output.csv'):
             data = get_ministry_data(session, ministry, min_url)
             data.update(get_minister_data(session, minister_url))
             writer.writerow(data)
-
-
-if __name__ == '__main__':
-    scrape_ministries()
